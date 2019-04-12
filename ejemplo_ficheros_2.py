@@ -1,0 +1,28 @@
+﻿
+f= open(r"C:\Users\flop\Desktop\Ficheros_Python\ejemplo_ficheros_2.txt", "w")
+num_car = f.write("Ana : 28\nJavier : 32\nEva : 45\nCarlos : 29")
+print("-----------------------------------------------------------------")
+print("Fichero escrito correctamente. Número de caracteres escritos: ",num_car,"\n")
+f.close()
+
+f = open(r"C:\Users\flop\Desktop\Ficheros_Python\ejemplo_ficheros_2.txt", "r")
+num = eval(input("Introduce el argumento para read:"))
+c1 = f.read(num)
+print("Usando read(", num,") obtenemos la cadena:")
+print(c1)
+print("-----------------------------------------------------------------")
+
+f.seek(0)
+num = eval(input("Introduce el argumento para readline:"))
+c2 = f.readline(num)
+print("Usando readline(",num,") obtenemos la cadena:")
+print(c2)
+
+f .seek(0)
+num = eval(input("Introduce el argumento para readlines:"))
+c3 = f .readlines(num)
+print("-----------------------------------------------------------------")
+print("Usando readlines(",num,") obtenemos la siguiente lista de cadenas:")
+print(c3)
+print("-----------------------------------------------------------------")
+f.close()

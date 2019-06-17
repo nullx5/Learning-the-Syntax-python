@@ -1,7 +1,7 @@
-﻿import pickle
+﻿import pickle 
 
 def main():
-    mifichero = open(r"C:\Users\flop\Desktop\Ficheros_Python\ejemplo_pickle_excepciones.dat", "wb")
+    mifichero = open(r"C:\ejemplo_pickle_excepciones.dat", "wb")
     a = 21
     b = 34.98
     c = "Jose Luis Hernández"
@@ -11,17 +11,17 @@ def main():
     pickle.dump(a, mifichero)
     pickle.dump(b, mifichero)
     pickle.dump(c, mifichero)
-    pickle.dump(d, mifichero)
+    pickle.dump(d, mifichero) 
     pickle.dump(e, mifichero)
     pickle.dump(f, mifichero)
     mifichero.close()
 
-    mifichero = open(r"C:\Users\flop\Desktop\Ficheros_Python\ejemplo_pickle_excepciones.dat", "rb")
+    mifichero = open(r"C:\ejemplo_pickle_excepciones.dat", "rb")
     misdatos = []
-    fin_fichero = False
-    try:
-        while not fin_fichero:
-            misdatos.append(pickle.load(mifichero))
+    #fin_fichero = False
+    try: 
+        while True:
+            misdatos.append(pickle.load(mifichero)) #EOFEror rompe el ciclo parece ser evaluado como True.
     except:
         mifichero.close()
     print("Los datos que hemos almacenado en el fichero y que hemos recuperado almacenándolos")

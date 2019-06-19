@@ -26,9 +26,9 @@ except AttributeError:
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName(_fromUtf8("Form"))
-        Form.resize(300, 300)
+        Form.resize(400, 400)
         self.pushButton = QtGui.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(100, 100, 100, 100))
+        self.pushButton.setGeometry(QtCore.QRect(150, 150, 100, 100))
         self.pushButton.setObjectName(_fromUtf8("pushButton"))
 
         self.retranslateUi(Form)

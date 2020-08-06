@@ -8,6 +8,7 @@ class MiFormulario(QtGui.QWidget):
     self.ui = Ui_Form()
     self.ui.setupUi(self)
     self.connect(self.ui.pushButton_2, QtCore.SIGNAL('clicked()'), self.sacatexto)
+    
   def sacatexto(self):
    self.ui.label.setText("Bienvenido")
 

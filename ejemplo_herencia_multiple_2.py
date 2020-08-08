@@ -60,7 +60,7 @@ class FichaTodosDepartamentos(FichaFabricacion, FichaTecnico, FichaComercial):
         def __init__(self):
             super().__init__(10.5)
             self.horasdefabrica = 0.0
-            self.horasdecomercial = 0.0
+            self.horasdetecnico = 0.0
             self.horasdecomercial = 0.0
 
 def main():
